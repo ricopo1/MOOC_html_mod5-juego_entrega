@@ -27,7 +27,7 @@ En esta entrega vamos a desarrollar un juego completo usando HTML, CSS y JavaScr
 El proyecto debe clonarse en el ordenador desde el que se está trabajando:
 
 ```
-$ git clone https://github.com/sonsoleslp/MOOC_html_mod5-juego_entrega
+$ git clone https://github.com/ging-moocs/MOOC_html_mod5-juego_entrega
 ```
 A continuación se debe acceder al directorio de trabajo.
 
