@@ -24,19 +24,16 @@ En esta entrega vamos a desarrollar un juego completo usando HTML, CSS y JavaScr
 
 ## Descargar el código del proyecto
 
-El proyecto se descarga en el ordenador local con estos comandos:
-
-El proyecto debe clonarse en el ordenador desde el que se está trabajando
+El proyecto debe clonarse en el ordenador desde el que se está trabajando:
 
 ```
-$ git clone https://github.com/CORE-2020/Entrega3_juego
+$ git clone https://github.com/sonsoleslp/MOOC_html_mod5-juego_entrega
 ```
-Entrar en el directorio de trabajo
+A continuación se debe acceder al directorio de trabajo.
 
 ```
-$ cd Entrega3_juego
+$ cd MOOC_html_mod5-juego_entrega
 ```
-
 ## Elementos del juego
 
 En este código, para modelar cada uno de los elementos del juego empleamos una clase JavaScript con sus métodos y atributos, los cuales se describen a continuación:
