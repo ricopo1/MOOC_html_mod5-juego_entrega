@@ -4,7 +4,7 @@
 <br/><br/><br/>
 
 
-# Módulo 5: Tipos y clases en JS. - Entrega P2P: Juego de disparos
+# Módulo 5: Tipos y clases en JS - Entrega P2P: Juego de disparos
 
 Versión: 24 de Mayo de 2020
 
@@ -12,13 +12,12 @@ Versión: 24 de Mayo de 2020
 
 Practicar con clases, Booleans, Strings y con el manejo de eventos.
 
-
 ## Descripción de la práctica
 
 En esta entrega vamos a desarrollar un juego completo usando HTML, CSS y JavaScript. El juego consiste en un juego clásico de disparos, en el que manejaremos a nuestro personaje (cuadrado) utilizando las flechas del teclado o la pantalla táctil. El objetivo del juego es disparar a una serie de formas que aparecerán en la pantalla para convertirlas en estrellas, a la vez que esquivamos sus disparos. Para comenzar el desarrollo partimos de la versión básica del juego cuyo código proporcionamos.
 
 <p align="center">
-  <img width="187" height="264" style="border: 1px solid grey;" src="https://raw.githubusercontent.com/CORE-2020/Entrega3_juego/master/assets/screenshot.png">
+  <img width="187" height="264" style="border: 1px solid grey;" src="https://raw.githubusercontent.com/ging-moocs/MOOC_html_mod5-juego_entrega/master/assets/screenshot.png">
 </p>
 
 
@@ -49,7 +48,7 @@ En el propio código están documentados todos los atributos y métodos de estas
 El siguiente diagrama muestra la jerarquía de herencia de clases:
 
 <p align="center">
-  <img width="495" height="591" src="https://raw.githubusercontent.com/CORE-2020/Entrega3_juego/master/assets/clases.png">
+  <img width="495" height="591" src="https://raw.githubusercontent.com/ging-moocs/MOOC_html_mod5-juego_entrega/master/assets/clases.png">
 </p>
 
 ## Comienzo y actualización del juego
@@ -87,7 +86,7 @@ Para implementar las tres funcionalidades debes seguir los siguientes pasos:
 	- Si al jugador no le quedan vidas, debe morirse definitivamente (llamando al método `collide` de su superclase _Character_) y terminar el juego llamando al método `endGame` del juego.
 5. Añadir el código necesario para pintar la puntuación y las vidas en la pantalla del juego en todo momento. Para ello crea una lista (etiqueta ul de HTML) con dos elementos (etiqueta li). El primero, con id &quot;scoreli&quot;, mostrará la puntuación con el siguiente formato:  ``Score: x``, siendo ``x`` el valor del atributo _score_ del juego. El segundo, con id ``livesli``, mostrará el nº de vidas con el siguiente formato: ``Lives: y``, siendo ``y`` el valor del atributo _lives_ del jugador. Para actualizar el HTML con los valores de puntuación y vidas utiliza el método `innerHTML` del elemento HTML correspondiente (es importante no utilizar el método `innerText` puesto que es incompatible con el autoCOREctor).
 6. Crear una clase nueva llamada _Boss_ en un nuevo fichero llamado ``Boss.js`` (no te olvides de importarlo en `index.html`). Esta clase debe heredar los métodos y atributos necesarios de la clase _Opponent_ sobreescribiendo aquellos que sean necesarios para lograr la funcionalidad requerida. Para representar al jefe final puedes usar las imágenes ``jefe.png`` y ``jefe_muerto.png`` de la carpeta assets.
-7. Modificar el código necesario en el método `removeOpponent` de _Game_ para que cuando el jugador consiga matar al triángulo, le aparezca el desafío final. Es decir, el atributo opponent de la instancia de _Game_ debe contener un objeto _Boss_`cuando el jugador derrote al oponente inicial. 
+7. Modificar el código necesario en el método `removeOpponent` de _Game_ para que cuando el jugador consiga matar al triángulo, le aparezca el desafío final. Es decir, el atributo opponent de la instancia de _Game_ debe contener un objeto `_Boss_`cuando el jugador derrote al oponente inicial. 
 8. Modificar el código de la función ``endGame`` (no modificar la cabecera) para que, si el jugador consigue derrotar al jefe final, es decir, gane la partida con mas de 0 vidas, aparezca la imagen ``you_win.png`` de la carpeta assets, en vez de ``game_over.png``.
 
 
@@ -112,3 +111,12 @@ $ npx moocauto                 ## Pasa los tests al fichero a entregar
 ```
 
 Se puede pasar la herramienta de autocorrección tantas veces como se desee.
+
+
+A la hora de evaluar, el evaluador tendrá que seguir los siguientes criterios:
+
+**RÚBRICA**: Se puntuará el ejercicio a corregir sumando el % indicado a la nota total si la parte indicada es correcta:
+
+* **25%:** Muestra correctamente las vidas del usuario
+* **25%:** Muestra correctamente la puntuación del usuario
+* **50%:** La funcionalidad del oponente final está implementada correctamente
