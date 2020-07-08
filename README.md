@@ -4,7 +4,7 @@
 <br/><br/><br/>
 
 
-# Módulo 5: Tipos y clases en JS - Entrega P2P: Juego de disparos
+# Módulo 5: Tipos y clases predefinidas, el tipo number, Multi-asignación, Spread-Rest, Clases ES6 y Herencia y Ejecución de programas JS. - Entrega P2P: Juego de disparos
 
 Versión: 24 de Mayo de 2020
 
