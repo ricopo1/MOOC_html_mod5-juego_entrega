@@ -14,9 +14,11 @@ class Player extends Character {
             y = game.height - height,
             speed = PLAYER_SPEED,
             myImage = PLAYER_PICTURE,
-            myImageDead = PLAYER_PICTURE_DEAD;
+            myImageDead = PLAYER_PICTURE_DEAD,
+            lives = PLAYER_LIVES;
 
         super(game, width, height, x, y, speed, myImage, myImageDead);
+        this.lives = lives;
     }
 
     /**
@@ -47,9 +49,17 @@ class Player extends Character {
      */
     collide() {
         if (!this.dead) {
+            this.lives -= 1;
+            document.getElementById('livesli').innerHTML = `Lives: ${this.lives}`;
             setTimeout(() => {
-                this.game.endGame();
+                super.collide(this.myImage);
+                this.dead = false;
             }, 2000);
+            
+            if(this.lives === 0) {
+                this.game.endGame();
+            }
+            
             super.collide();
         }
     }
