@@ -92,7 +92,7 @@ class Game {
         if (this.opponent) {
             document.body.removeChild(this.opponent.image);
         }
-        this.opponent = new Opponent(this);
+        this.opponent = new Boss(this);
     }
 
     /**
@@ -166,7 +166,7 @@ class Game {
      */
     checkCollisions () {
         let impact = false;
-
+        
         for (let i = 0; i < this.opponentShots.length; i++) {
             impact = impact || this.hasCollision(this.player, this.opponentShots[i]);
         }
@@ -210,8 +210,9 @@ class Game {
      */
     endGame () {
         this.ended = true;
-        let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, GAME_OVER_PICTURE)
-        gameOver.render();
+        
+        let gameStatus = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, (this.opponent.dead)?GAME_WIN_PICTURE:GAME_OVER_PICTURE)
+        gameStatus.render();
     }
 
     /**

@@ -48,9 +48,11 @@ class Player extends Character {
      * Mata al jugador
      */
     collide() {
+        
         if (!this.dead) {
             this.lives -= 1;
             document.getElementById('livesli').innerHTML = `Lives: ${this.lives}`;
+
             setTimeout(() => {
                 super.collide(this.myImage);
                 this.dead = false;
